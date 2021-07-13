@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #45d5c4;
+}
+
+.container {
+  margin: auto;
+  margin-top: 40px;
+  width: 40vw;
+  min-height: auto;
+  background: lightgreen;
+}
+
+.input_div,
+.result_div {
+  width: 90%;
+  padding: 5%;
+}
+
+.header_div {
+  width: 100%;
+  margin: 0;
+  background: url(https://images.pexels.com/photos/636237/pexels-photo-636237.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 10rem;
+}
+.input_div h4 {
+  color: blue;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.input_div {
+  background: wheat;
+}
+.input_div input {
+  width: 70%;
+  padding: 10px;
+  height: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+
+}
+.input_div input:focus {
+  border: 1px solid #45d5c4;
+  outline: none;
+}
+
+button {
+  background: rgb(25, 27, 136);
+  color: #fff;
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+button:hover {
+  background: blue;
+}
+ul li {
+  list-style-type: none;
+}
+.result_div {
+  background: #719de6;
+  margin-top: 1%;
+  max-height: 15rem;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.result_div ul li {
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 5px;
+  position: relative;
+}
+.mytrash {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+ul li:nth-child(odd) {
+  background: #f0f0f0;
+}
+.result_div ul li:hover {
+  background: rgb(202, 202, 212);
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 95%;
+  }
+  .header_div {
+    width: 100%;
+    margin: 0;
+}
+ 
+  .input_div,
+  .result_div {
+    width: 90%;
+  }
+}
