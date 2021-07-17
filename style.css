@@ -75,6 +75,7 @@ ul li {
   max-height: 15rem;
   overflow: auto;
   overflow-x: hidden;
+  margin-bottom: 10px;
 }
 .result_div ul li {
   font-weight: 600;

@@ -42,6 +42,9 @@ function Add() {
         outputbox.append(ul);
 
         document.getElementById('myinput').value = "";
+        swal("Good Job !", "task added to list", "success", {
+            button: "Ok",
+          });
     }
 }
 
