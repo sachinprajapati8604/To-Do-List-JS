@@ -37,9 +37,11 @@ body {
   margin: 10px;
 }
 .input_div {
+
   background: wheat;
 }
 .input_div input {
+  word-wrap: break-word;
   width: 70%;
   padding: 10px;
   height: 1.5rem;
@@ -52,7 +54,7 @@ body {
   outline: none;
 }
 
-button {
+.input_div button {
   background: rgb(25, 27, 136);
   color: #fff;
   width: 20%;

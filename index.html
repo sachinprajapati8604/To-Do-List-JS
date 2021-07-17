@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>To-Do-List</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
+    
+
     <div class="container">
         <div class="header_div">
            
         </div>
         <div class="input_div">
             <h4>My To-Do List App</h4>
-            <input type="text" placeholder="Write something...." id="myinput">
-            <button onclick="Add()">Add</button>
+            <input type="text" placeholder="Write something...." id="myinput" value="">
+            <button onclick="Add()" id="addbtn">Add</button>
         </div>
         <div class="result_div" id="outputbox">
             <ul id="list">
@@ -28,6 +29,10 @@
             </ul>
         </div>
     </div>
+
+    <script src="script.js"></script>
+    <!-- sweetalet cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
