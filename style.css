@@ -2,84 +2,92 @@
   margin: 0;
   padding: 0;
 }
-body {
-  background: #45d5c4;
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f3f2ef;
+  background-image: url(https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size:  100%;
 }
 
 .container {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 40vw;
   min-height: auto;
-  background: lightgreen;
+  background:#fff ;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.input_div,
-.result_div {
+.input_div{
   width: 90%;
   padding: 5%;
 }
 
 .header_div {
-  width: 100%;
-  margin: 0;
-  background: url(https://images.pexels.com/photos/636237/pexels-photo-636237.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 10rem;
-}
-.input_div h4 {
-  color: blue;
-  font-weight: bolder;
-  font-size: 1.8rem;
+  width: 90%;
+  height: 6rem;
+  padding: 20px;
   text-align: center;
+}
+.header_div h4 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: brown;
+  font-weight: 700;
+  font-size: 2.5rem;
   padding: 10px;
-  margin: 10px;
 }
 .input_div {
-
-  background: wheat;
+  background: #7952b3;
 }
 .input_div input {
   word-wrap: break-word;
-  width: 70%;
+  width: 95%;
   padding: 10px;
   height: 1.5rem;
   border-radius: 1rem;
   border: none;
-
 }
+
 .input_div input:focus {
-  border: 1px solid #45d5c4;
+  /* border: 1px solid #45d5c4; */
   outline: none;
 }
 
 .input_div button {
-  background: rgb(25, 27, 136);
+  background: #04aa6d;
   color: #fff;
   width: 20%;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   letter-spacing: 0.1rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 button:hover {
-  background: blue;
+  background: green;
 }
+
 ul li {
   list-style-type: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .result_div {
-  background: #719de6;
   margin-top: 1%;
-  max-height: 15rem;
+  max-height: 20rem;
   overflow: auto;
   overflow-x: hidden;
   margin-bottom: 10px;
+  display: none;
+  padding: 5%;
+  
 }
 .result_div ul li {
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
   background: #fff;
   padding: 15px;
   border-radius: 5px;
@@ -87,8 +95,10 @@ ul li {
   position: relative;
 }
 .mytrash {
+  color: #000;
   position: absolute;
   right: 10px;
+  bottom: 10px;
   cursor: pointer;
   font-size: 20px;
 }
@@ -97,19 +107,119 @@ ul li:nth-child(odd) {
   background: #e2f2e2;
 }
 .result_div ul li:hover {
-  background: rgb(202, 202, 212);
+  background: #c7d8f1;
 }
-@media screen and (max-width: 1000px) {
-  .container {
-    width: 95%;
+#datetime {
+  width: 73%;
+  margin-top: 10px;
+}
+
+.datetime_para {
+  font-size: 16px;
+  color: #04aa6d;
+  padding: 5px;
+}
+.timeleft_para{
+  color: #fe0000;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.progressbar {
+  width: 80%;
+  margin: 10px auto;
+  border: solid 1px #000;
+}
+
+.progressbar .inner {
+  height: 7px;
+  animation: progressbar-countdown;
+  /* Placeholder, this will be updated using javascript */
+  animation-duration: 40s;
+  /* We stop in the end */
+  animation-iteration-count: 1;
+  /* Stay on pause when the animation is finished finished */
+  animation-fill-mode: forwards;
+  /* We start paused, we start the animation using javascript */
+  animation-play-state: paused;
+  /* We want a linear animation, ease-out is standard */
+  animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+  0% {
+      width: 100%;
+      background: #0F0;
   }
-  .header_div {
-    width: 100%;
-    margin: 0;
+
+  100% {
+      width: 0%;
+
+      background: #F00;
+  }
 }
- 
+
+
+
+/*  css */
+
+#progressBar {
+  width: 90%;
+  margin: 10px auto;
+  height: 22px;
+  background-color: #0A5F44;
+}
+
+#progressBar div {
+  height: 100%;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 22px;
+  /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: #CBEA00;
+  box-sizing: border-box;
+}
+
+.live_date_time{
+  color: #43246d;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#live_time,#live_date,#live_day{
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.__htext{
+  color: #464646;
+}
+
+
+@media screen and (max-width: 1000px) {
+  body{
+    background-color: #f1f3f4;
+    background-image: none;
+  }
+  .container {
+    width: 98%;
+    margin: auto;
+    /* margin-top: 30px; */
+  }
+
   .input_div,
   .result_div {
     width: 90%;
+  }
+  #datetime {
+    width: 72%;
+  }
+  #live_time,#live_date,#live_day{
+    font-size: 1rem;
+   
+    
   }
 }

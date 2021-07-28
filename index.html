@@ -5,34 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>To-Do-List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
-    
+
+
     <div class="container">
         <div class="header_div">
-           
+            <h4>To-Do's </h4>
+            <div class="live_date_time">
+                <span id="live_date"> </span>
+                <span id="live_day"> </span>
+                <span id="live_time"> </span>
+            </div>
         </div>
         <div class="input_div">
-            <h4>My To-Do List App</h4>
-            <input type="text" placeholder="Write something...." id="myinput" value="">
-            <button onclick="Add()" id="addbtn">Add</button>
+
+            <input type="text" placeholder="What to be add ? write here..." id="myinput" value="">
+
+            <input type="datetime-local" id="datetime" placeholder="select date and time">
+            <button onclick="Add()" id="addbtn">ADD</button>
         </div>
         <div class="result_div" id="outputbox">
             <ul id="list">
-                <li> Mon to Fri - Lecture at 9pm to 11pm <i class="far fa-trash-alt mytrash" onclick="removeItem()"></i></li>
-                <li>Mon & Thu : group mentor session at 11pm to 12:30am <i class="far fa-trash-alt mytrash" onclick="removeItem()"></i></li>
+                <!-- list will be added throgh js  -->
             </ul>
         </div>
     </div>
 
     <script src="script.js"></script>
     <!-- sweetalet cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
