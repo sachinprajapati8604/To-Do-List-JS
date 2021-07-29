@@ -55,8 +55,11 @@
 * Time over when task has been completed 
 <img src="ss/s5.png" width="100%">
 
-* Mobile view 
+* After task expire interface 
 <img src="ss/s6.png" width="100%">
+
+* Mobile view 
+<img src="ss/mobile.png" width="100%">
 
 #### Some edge cases snapshot
 
