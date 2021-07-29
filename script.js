@@ -20,8 +20,9 @@ datetime_ip.addEventListener("keyup", function (event) {
 
 
 //calling funtions which is needed on page load 
-window.addEventListener('load',(event)=>{
+window.addEventListener('load', (event) => {
     liveTime();
+   
 })
 
 //declaring global index to maintain id for multiple list
@@ -54,14 +55,14 @@ function Add() {
     mysecond = 0;
     index = index + 1;
 
-    console.log(arr_second[index]);
+    // console.log(arr_second[index]);
 
     if (myinput === "") {
         // alert("Please write something");
         swal("Input Can't  empty", "Please write something", "warning", {
             button: "Ok",
         });
-    }else if(date_time === ""){
+    } else if (date_time === "") {
         swal("Date time can't  empty", "Please select date and time", "warning", {
             button: "Ok",
         });
@@ -86,11 +87,11 @@ function Add() {
         ul.append(li);
         outputbox.append(ul);
 
-        console.log(index);
+        // console.log(index);
 
-        console.log("mysecond  " + mysecond);
-        console.log(arr_second);
-        console.log(arr_input);
+        // console.log("mysecond  " + mysecond);
+        // console.log(arr_second);
+        // console.log(arr_input);
 
         //calling progress bar funtion after saving it all 
         createProgressbar(`progressbar${index}`, `${arr_second[index]}s`);
@@ -106,6 +107,7 @@ function Add() {
     }
 
 }
+
 
 //task coundown funtion 
 
@@ -204,27 +206,27 @@ function liveTime() {
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     let date = new Date();
-    let h=date.getHours();
-    let m=addZero(date.getMinutes());
-    let s=addZero(date.getSeconds());
-    let  clock=`${h}:${m}:${s} PM`; 
-    document.getElementById('live_time').innerHTML=`${clock}`;
+    let h = addZero(date.getHours());
+    let m = addZero(date.getMinutes());
+    let s = addZero(date.getSeconds());
+    let clock = `${h}:${m}:${s}`;
+    document.getElementById('live_time').innerHTML = `${clock}`;
     // console.log(clock);
-    let curr_date=date.getDate();
-    let month=months[date.getMonth()];
-    let year=date.getFullYear();
-    let day =days[date.getDay()];
-    let live_date=`${curr_date},${month},${year}`;
-    document.getElementById('live_date').innerHTML=`${live_date}`;
-    document.getElementById('live_day').innerHTML=`${day}`;
-    setTimeout(liveTime,1000);
+    let curr_date = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+    let day = days[date.getDay()];
+    let live_date = `${curr_date},${month},${year}`;
+    document.getElementById('live_date').innerHTML = `${live_date}`;
+    document.getElementById('live_day').innerHTML = `${day}`;
+    setTimeout(liveTime, 1000);
 }
 
 
 
 function createProgressbar(id, duration, callback) {
 
-    console.log(id)
+    // console.log(id)
     // We select the div that we want to turn into a progressbar
     var progressbar = document.getElementById(id);
     progressbar.className = 'progressbar';

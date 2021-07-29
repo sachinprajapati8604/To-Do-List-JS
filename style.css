@@ -2,12 +2,17 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #f3f2ef;
   background-image: url(https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_960_720.jpg);
   background-repeat: no-repeat;
-  background-size:  100%;
+  background-size: 100%;
+}
+
+::selection {
+  color: aqua;
+  background-color: #000;
 }
 
 .container {
@@ -15,11 +20,11 @@ body{
   margin-top: 20px;
   width: 40vw;
   min-height: auto;
-  background:#fff ;
+  background: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.input_div{
+.input_div {
   width: 90%;
   padding: 5%;
 }
@@ -72,7 +77,8 @@ button:hover {
 
 ul li {
   list-style-type: none;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .result_div {
   margin-top: 1%;
@@ -82,7 +88,6 @@ ul li {
   margin-bottom: 10px;
   display: none;
   padding: 5%;
-  
 }
 .result_div ul li {
   font-weight: 600;
@@ -119,7 +124,7 @@ ul li:nth-child(odd) {
   color: #04aa6d;
   padding: 5px;
 }
-.timeleft_para{
+.timeleft_para {
   color: #fe0000;
   font-size: 16px;
   padding: 5px;
@@ -148,18 +153,16 @@ ul li:nth-child(odd) {
 
 @keyframes progressbar-countdown {
   0% {
-      width: 100%;
-      background: #0F0;
+    width: 100%;
+    background: #0f0;
   }
 
   100% {
-      width: 0%;
+    width: 0%;
 
-      background: #F00;
+    background: #f00;
   }
 }
-
-
 
 /*  css */
 
@@ -167,7 +170,7 @@ ul li:nth-child(odd) {
   width: 90%;
   margin: 10px auto;
   height: 22px;
-  background-color: #0A5F44;
+  background-color: #0a5f44;
 }
 
 #progressBar div {
@@ -177,30 +180,30 @@ ul li:nth-child(odd) {
   line-height: 22px;
   /* same as #progressBar height if we want text middle aligned */
   width: 0;
-  background-color: #CBEA00;
+  background-color: #cbea00;
   box-sizing: border-box;
 }
 
-.live_date_time{
+.live_date_time {
   color: #43246d;
   padding: 10px;
   display: flex;
   justify-content: space-between;
 }
-#live_time,#live_date,#live_day{
+#live_time,
+#live_date,
+#live_day {
   font-size: 1.3rem;
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
-.__htext{
+.__htext {
   color: #464646;
 }
 
-
 @media screen and (max-width: 1000px) {
-  body{
+  body {
     background-color: #f1f3f4;
     background-image: none;
   }
@@ -208,6 +211,10 @@ ul li:nth-child(odd) {
     width: 98%;
     margin: auto;
     /* margin-top: 30px; */
+  }
+  .header_div{
+    background: #ddeeff;
+    color: #fff;
   }
 
   .input_div,
@@ -217,9 +224,9 @@ ul li:nth-child(odd) {
   #datetime {
     width: 72%;
   }
-  #live_time,#live_date,#live_day{
+  #live_time,
+  #live_date,
+  #live_day {
     font-size: 1rem;
-   
-    
   }
 }
