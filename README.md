@@ -59,7 +59,7 @@
 <img src="ss/s6.png" width="100%">
 
 * Mobile view 
-<img src="ss/mobile.png" width="100%">
+<img src="ss/mobile.png" width="300px" height="600px">
 
 #### Some edge cases snapshot
 
