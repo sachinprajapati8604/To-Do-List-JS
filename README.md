@@ -2,15 +2,15 @@
 
 #### I used HTML,CSS,JS to make this project.
 
-###github page link :  https://sachinprajapati8604.github.io/To-Do-List-JS/
+### github page link :  https://sachinprajapati8604.github.io/To-Do-List-JS/
  
 <hr>
 
-###Netlify Link : https://sptodos.netlify.app/
+### Netlify Link : https://sptodos.netlify.app/
 
 <hr>
 
-###Features
+### Features
 
 *add a task and pick date & time to complete the task.
 *you will get successfull alert for add a task.
@@ -26,7 +26,7 @@
 
 <hr>
 
-###Others 
+### Others 
 
 *I added some edge cases.
 *You can't add empty task to list.
@@ -38,35 +38,35 @@
 
 <hr>
 
-###Snapshot 
+### Snapshot 
 
-*Main page Interface
+* Main page Interface
 <img src="ss/s1.png" width="100%">
 
-*fill date and time 
+* fill date and time 
 <img src="ss/s2.png" width="100%">
 
-*alert for successfull
+* alert for successfull
 <img src="ss/s3.png" width="100%">
 
-*ui after added task
+* ui after added task
 <img src="ss/s4.png" width="100%">
 
-*Time over when task has been completed 
+* Time over when task has been completed 
 <img src="ss/s5.png" width="100%">
 
-*Mobile view 
+* Mobile view 
 <img src="ss/s6.png" width="100%">
 
-####Some edge cases snapshot
+#### Some edge cases snapshot
 
-*If you will try to add without fill 
+* If you will try to add without fill 
 <img src="ss/e_empty.png" width="100%">
 
-*When date and time is empty 
+* When date and time is empty 
 <img src="ss/e_date.png" width="100%">
 
-*When you select past date time  
+* When you select past date time  
 <img src="ss/w_date.png" width="100%">
 
 
