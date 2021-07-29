@@ -61,7 +61,7 @@
 #### Some edge cases snapshot
 
 * If you will try to add without fill 
-<img src="ss/e_empty.png" width="100%">
+<img src="ss/e_input.png" width="100%">
 
 * When date and time is empty 
 <img src="ss/e_date.png" width="100%">
