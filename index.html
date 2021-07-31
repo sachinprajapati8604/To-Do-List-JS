@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>To-Do-List</title>
     <link rel="shortcut icon" href="ss/fevicone.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   
+
     <div class="container">
         <div class="header_div">
-            <h4>To-Do's </h4>
+            <h4 class="__headtext">To-Do's </h4>
+            <div id="wish" class="wish"></div>
             <div class="live_date_time">
                 <span id="live_date"> </span>
                 <span id="live_day"> </span>
@@ -26,12 +28,14 @@
         </div>
         <div class="input_div">
 
-            <input type="text" placeholder="What to be add ? write here..." id="myinput" value="">
+            <input type="text" placeholder="hey , what's plan for today ? write here..." id="myinput" value="">
 
             <input type="datetime-local" id="datetime" placeholder="select date and time">
             <button onclick="Add()" id="addbtn"><i class="fas fa-plus"></i></button>
         </div>
         <div class="result_div" id="outputbox">
+            <div class="btn"> <button id="clear_local" onclick="removeFromLocalStorage()">clear all</button> <span
+                    id="list_count"></span></div>
             <ul id="list">
                 <!-- list will be added throgh js  -->
             </ul>

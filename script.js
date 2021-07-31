@@ -1,3 +1,5 @@
+let arr = [];
+
 //calling Add function by enter key  
 var input = document.getElementById("myinput");
 
@@ -22,9 +24,75 @@ datetime_ip.addEventListener("keyup", function (event) {
 //calling funtions which is needed on page load 
 window.addEventListener('load', (event) => {
     liveTime();
-   
+    getData();
+    getCount();
 })
 
+function getData() {
+
+    let op = JSON.parse(localStorage.getItem('my_to_do_list'));
+    var outputbox = document.getElementById('outputbox');
+    outputbox.style.display = 'block';
+    var ul = document.getElementById('list');
+
+    // console.log(op.length);
+    getCount();
+    op.forEach(element => {
+        // console.log(element.ip_obj)
+        var mydateobj = JSON.parse(`{ "date":${element.date_obj}}`);
+
+        var li = document.createElement('li');
+        //   console.log("index of add fun"+index);
+        // li.innerHTML = `${element.ip_obj}`;
+
+        li.innerHTML = `<input type="checkbox" onclick="chekedItems()"  id="check${element.ind_obj}" class="__check"> <span  id="list_text${element.ind_obj}" class="__listtext"> ${element.ip_obj}</span> <p class="datetime_para" id="datetime_para${element.ind_obj}"> <i class="far fa-clock"></i> <span class="__htext"> Due till : </span>  ${element.date_mng} 
+        `;
+
+        var i = document.createElement('i');
+        i.className = 'far fa-trash-alt mytrash';
+
+        i.onclick = function () {
+            removeItem();
+        }
+        li.append(i);
+        ul.append(li);
+        outputbox.append(ul);
+
+    });
+}
+
+function removeFromLocalStorage() {
+    localStorage.removeItem('my_to_do_list');
+    swal("all list items has been deleted");
+    window.setTimeout(function () {
+        location.reload();
+    }, 2000);
+}
+
+
+function getCount() {
+    let op = JSON.parse(localStorage.getItem('my_to_do_list'));
+    let para = document.getElementById('list_count');
+    para.innerHTML = `You have <b> ${op.length} </b> new list items`;
+}
+
+
+// CheckBox ELEMENT - click on checkBox to strike the list item off list*********************
+function chekedItems() {
+    var checkBox = document.getElementsByClassName("__check");
+    var ul = document.getElementById('list');
+    for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].checked) {
+            checkBox[i].parentNode.classList = 'strike';            
+        } else {
+            checkBox[i].parentNode.classList = 'normal';
+        }
+
+    }
+}
+
+
+// console.log(arr);
 //declaring global index to maintain id for multiple list
 let index = 0;
 var mysecond = 0;
@@ -37,6 +105,7 @@ function Add() {
     let myinput = document.getElementById('myinput').value;
     let date_time = document.getElementById('datetime').value;
     let date = new Date(date_time);
+    // console.log("type of date "+typeof(date))
     // console.log(Date.parse(date_time));   //1627151460000
     // console.log(dateManage(date));        // Sun Jul 25 2021 00:06:00 GMT+0530 (India Standard Time)
 
@@ -52,7 +121,6 @@ function Add() {
         return;
     }
 
-    mysecond = 0;
     index = index + 1;
 
     // console.log(arr_second[index]);
@@ -67,19 +135,32 @@ function Add() {
             button: "Ok",
         });
     } else {
+        let obj = {
+            ind_obj: index,
+            'ip_obj': myinput,
+            sec_obj: mysecond,
+            date_mng: dateManage(date),
+            date_obj: JSON.stringify(date)
+        }
+        arr.push(obj);
+        console.log(arr);
+        localStorage.setItem('my_to_do_list', JSON.stringify(arr));
+        getCount();
+
         arr_input.push(myinput);
         var outputbox = document.getElementById('outputbox');
         outputbox.style.display = 'block';
         var ul = document.getElementById('list');
         var li = document.createElement('li');
         //   console.log("index of add fun"+index);
-        li.innerHTML = `${myinput} <p class="datetime_para"> <i class="far fa-clock"></i> <span class="__htext"> Due till : </span> ${dateManage(date)} </p>  
+        li.innerHTML = `<input type="checkbox" onclick="chekedItems()"  id="check${index}" class="__check"> <span  id="list_text${index}" class="__listtext"> ${myinput}</span> <p class="datetime_para" id="datetime_para${index}"> <i class="far fa-clock"></i> <span class="__htext"> Due till : </span> ${dateManage(date)} </p>  
         <p id="time_left${index}" class="timeleft_para">  ${countDown(date, index)}</p>
         <div id="progressbar${index}"></div>
         `;
 
         var i = document.createElement('i');
         i.className = 'far fa-trash-alt mytrash';
+
         i.onclick = function () {
             removeItem();
         }
@@ -92,6 +173,7 @@ function Add() {
         // console.log("mysecond  " + mysecond);
         // console.log(arr_second);
         // console.log(arr_input);
+        mysecond = 0;
 
         //calling progress bar funtion after saving it all 
         createProgressbar(`progressbar${index}`, `${arr_second[index]}s`);
@@ -211,6 +293,21 @@ function liveTime() {
     let s = addZero(date.getSeconds());
     let clock = `${h}:${m}:${s}`;
     document.getElementById('live_time').innerHTML = `${clock}`;
+    let msg = document.getElementById('wish');
+    if (h > 05 && h <= 12) {
+        // console.log("Good Morning !!!");
+        msg.innerHTML = `Hii,Good Morning <i class="material-icons">light_mode</i>`;
+    } else if (h > 12 && h <= 16) {
+        // console.log("Good Afternoon !!!");
+        msg.innerHTML = `Hii,Good Afternoon <i class="material-icons">wb_sunny</i>`;
+    } else if (h > 16 && h <= 23) {
+        // console.log("Good evening !!!!");
+        msg.innerHTML = `Hii,Good Evening <i class="material-icons">nightlight</i>`;
+    }
+    else {
+        // console.log("Good evening !!!!");
+        msg.innerHTML = `Hii,Good Evening <i class="material-icons">nights_stay</i>`;
+    }
     // console.log(clock);
     let curr_date = date.getDate();
     let month = months[date.getMonth()];

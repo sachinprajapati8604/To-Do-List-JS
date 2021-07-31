@@ -1,6 +1,6 @@
 # To-Do-List-JS
 
-#### I used HTML,CSS,JS to make this project.
+#### I used HTML,CSS,JS to make this project. I used Local Storage to save list items to prevent list loss. I implemented time bases wish message.
 
 ### github page link :  https://sachinprajapati8604.github.io/To-Do-List-JS/
  
@@ -22,6 +22,11 @@
 * date and time funtions to visualize .
 * You will get alert when task end.
 * You can remove the list items.
+* <b>List will be stored in Local Storage </b>
+* <b>Automated wisher according to time</b>
+* You can marked list for done .
+* clear all option made clear all list from localstorage.
+* count for list items. 
 
 
 <hr>
@@ -40,7 +45,13 @@
 
 ### Snapshot 
 
-* Main page Interface
+* Main page Updated  UI
+<img src="ss/newui.png" width="100%">
+
+* Mobile view  updated UI
+<img src="ss/m2.png" width="250px" height="500px">
+
+* Main page old Interface
 <img src="ss/s1.png" width="100%">
 
 * fill date and time 
@@ -71,5 +82,3 @@
 
 * When you select past date time  
 <img src="ss/w_date.png" width="100%">
-
-

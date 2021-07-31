@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background: #f3f2ef;
   background-image: url(https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_960_720.jpg);
   background-repeat: no-repeat;
@@ -31,19 +33,26 @@ body {
 
 .header_div {
   width: 90%;
-  height: 6rem;
+  min-height: 6rem;
   padding: 20px;
-  text-align: center;
+ 
 }
-.header_div h4 {
+.__headtext {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: brown;
   font-weight: 700;
   font-size: 2.5rem;
-  padding: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.wish{
+  color: #00002c;
+  font-size: 2rem;
+  padding:10px;
 }
 .input_div {
-  background: #7952b3;
+  background: #95dcf1;
 }
 .input_div input {
   word-wrap: break-word;
@@ -52,6 +61,9 @@ body {
   height: 1.5rem;
   border-radius: 1rem;
   border: none;
+  color: #00002c;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .input_div input:focus {
@@ -102,6 +114,7 @@ ul li {
   border-radius: 5px;
   margin: 5px;
   position: relative;
+  border-left: 5px solid #43246d;
 }
 .mytrash {
   color: #000;
@@ -125,6 +138,7 @@ ul li:nth-child(odd) {
 
 .datetime_para {
   font-size: 16px;
+  font-weight: 700;
   color: #04aa6d;
   padding: 5px;
 }
@@ -138,6 +152,7 @@ ul li:nth-child(odd) {
   width: 80%;
   margin: 10px auto;
   border: solid 1px #000;
+
 }
 
 .progressbar .inner {
@@ -206,6 +221,39 @@ ul li:nth-child(odd) {
   color: #464646;
 }
 
+.__check{
+ width: 16px;
+ height: 16px;
+}
+
+.__listtext{
+  font-size: 25px;
+}
+
+.btn button{
+  background-color:#d9534f;
+  color: #fff;
+  padding: 7px;
+  border: none;
+  border-radius: 7px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn span{
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+.strike {
+  text-decoration: line-through;
+ }
+.normal{
+  text-decoration: none;
+}
+
+
 @media screen and (max-width: 1000px) {
   body {
     background-color: #f1f3f4;
@@ -228,5 +276,8 @@ ul li:nth-child(odd) {
   #live_date,
   #live_day {
     font-size: 1rem;
+  }
+  .input_div input{
+    font-size: 18px;
   }
 }
