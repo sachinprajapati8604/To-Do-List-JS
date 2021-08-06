@@ -30,8 +30,10 @@
 
             <input type="text" placeholder="hey , what's plan for today ? write here..." id="myinput" value="">
 
+          <div class="calander-box">
             <input type="datetime-local" id="datetime" placeholder="select date and time">
-            <button onclick="Add()" id="addbtn"><i class="fas fa-plus"></i></button>
+            <i onclick="Add()" id="addbtn" class="fas fa-plus"></i>
+          </div>
         </div>
         <div class="result_div" id="outputbox">
             <div class="btn"> <button id="clear_local" onclick="removeFromLocalStorage()">clear all</button> <span
